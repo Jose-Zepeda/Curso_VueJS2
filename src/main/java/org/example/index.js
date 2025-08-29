@@ -30,6 +30,24 @@ var app4 = new Vue({
     }
 })
 
+var app5 = new Vue({
+    el: '#app-5',
+    data: {
+        message: 'Hola Vue.js!'
+    },
+    methods: {
+        reverseMessage: function () {
+            this.message = this.message.split('').reverse().join('')
+        }
+    }
+})
+
+var app6 = new Vue({
+    el: '#app-6',
+    data: {
+        message: 'Hola Vue!'
+    }
+})
 app.message = 'Yo cambie el mensaje';
 
 app2.message = 'Yo cambie el mensaje';
