@@ -7,5 +7,12 @@ var vm = new Vue({
         reversedMessage: function () {
             return this.message.split('').reverse().join('')
         }
+    },
+
+    methods: {
+        reverseMessage: function() {
+            return this.message.split('').reverse().join('')
+        }
     }
 })
+
