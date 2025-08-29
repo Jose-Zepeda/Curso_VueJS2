@@ -70,3 +70,38 @@ app.message = 'Yo cambie el mensaje';
 app2.message = 'Yo cambie el mensaje';
 
 app3.seen = false
+
+//La instancia VUE
+
+var data = { a: 1 }
+
+var vm = new Vue({
+    data: data
+})
+
+vm.a = 2
+data.a
+
+data.a = 3
+vm.a
+
+vm.b = 'hola'
+
+
+var obj = {
+    foo: 'bar'
+}
+
+Object.freeze(obj)
+
+new Vue({
+    el: '#app',
+    data: obj
+})
+
+vm.$data === data // => true
+vm.$el === document.getElementById('example') // => true
+
+vm.$watch('a', function (newValue, oldValue) {
+
+})
