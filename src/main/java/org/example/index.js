@@ -1,17 +1,29 @@
 var vm = new Vue({
-    el: '#example',
+    el: '#demo',
     data: {
-        message: 'Hola'
+        firstName: 'Foo',
+        lastName: 'Bar',
+        fullName: 'Foo Bar'
+    },
+    watch: {
+        firstName: function (val) {
+            this.fullName = val + ' ' + this.lastName
+        },
+        lastName: function (val) {
+            this.fullName = this.firstName + ' ' + val
+        }
+    }
+})
+
+var vm2 = new Vue({
+    el: '#demo2',
+    data: {
+        firstName: 'Foo',
+        lastName: 'Bar'
     },
     computed: {
-        reversedMessage: function () {
-            return this.message.split('').reverse().join('')
-        }
-    },
-
-    methods: {
-        reverseMessage: function() {
-            return this.message.split('').reverse().join('')
+        fullName: function () {
+            return this.firstName + ' ' + this.lastName
         }
     }
 })
