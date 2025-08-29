@@ -105,3 +105,12 @@ vm.$el === document.getElementById('example') // => true
 vm.$watch('a', function (newValue, oldValue) {
 
 })
+
+new Vue({
+    data: {
+        a: 1
+    },
+    created: function () {
+        console.log('a es: ' + this.a)
+    }
+})
