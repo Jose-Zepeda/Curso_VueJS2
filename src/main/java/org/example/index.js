@@ -12,6 +12,26 @@ var app2 = new Vue({
     }
 })
 
+var app3 = new Vue({
+    el: '#app-3',
+    data: {
+        seen: true
+    }
+})
+
+var app4 = new Vue({
+    el: '#app-4',
+    data: {
+        todos: [
+            { text: 'Aprender JavaScript' },
+            { text: 'Aprender Vue' },
+            { text: 'Construir algo increíble' }
+        ]
+    }
+})
+
 app.message = 'Yo cambie el mensaje';
 
 app2.message = 'Yo cambie el mensaje';
+
+app3.seen = false
