@@ -56,6 +56,30 @@
             <button v-on:click="foo = 'baz'">Cámbialo</button>
         </div>
 
+        <span>Message: {{ msg }}</span>
+        <span v-once>Esto nunca cambiara: {{ msg }}</span>
+
+        <p>Using mustaches: {{ rawHtml }}</p>
+        <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+
+        <div v-bind:id="dynamicId"></div>
+        <button v-bind:disabled="isButtonDisabled">Button</button>
+
+        <div id = "app">
+
+
+            {{ number + 1 }}
+
+            {{ ok ? 'YES' : 'NO' }}
+
+            {{ message.split('').reverse().join('') }}
+
+            <div v-bind:id="'list-' + id"></div>
+        </div>
         <script src="index.js"></script>
     </body>
+
+
+
 </html>
+
